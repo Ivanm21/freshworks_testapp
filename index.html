@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chat integration page</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+
+  <main>
+   <script>
+  function initFreshChat() {
+    window.fcWidget.init({
+      token: "c56e80d9-47b9-4b36-abfb-05d78d73f002",
+      host: "https://wchat.eu.freshchat.com"
+    });
+  }
+  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.eu.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+</script>
+  </main>
+  <footer id="footer"></footer>
+
+  </body>
+</html>
