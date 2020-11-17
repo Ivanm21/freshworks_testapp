@@ -1,23 +1,29 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <title>Chat integration page</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="main.css"/>
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
 
-  <main>
-   <script>
-  function initFreshChat() {
-    window.fcWidget.init({
-      token: "c56e80d9-47b9-4b36-abfb-05d78d73f002",
-      host: "https://wchat.eu.freshchat.com"
-    });
-  }
-  function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.eu.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
-</script>
-  </main>
-  <footer id="footer"></footer>
+<main>
 
-  </body>
+  <button onclick="loadAsGuest()">Guest</button>
+
+  <div class="divider"></div>
+
+  <br><br>
+  <input type="text" placeholder="externalId" id="externalId"/>
+  <br><br>
+  <input type="text" placeholder="firstName" id="firstName"/>
+  <br><br>
+  <input type="text" placeholder="lastName" id="lastName"/>
+  <br><br>
+  <button onclick="loadAsRealPlayer()">Logged in User</button>
+</main>
+<footer id="footer"></footer>
+
+</body>
 </html>
